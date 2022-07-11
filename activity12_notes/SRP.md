@@ -21,10 +21,12 @@ Este empleado es un empleado junior
 
 ### PREGUNTA 2
 
-La clase **Empleado** tiene multi responsabilidades (verifica si el empleado es Senior *checkSeniority* y generar el **ID** del empleado *generateEmId* y encapsula el objeto Empleado).
+Problema:
+- La clase **Empleado** tiene más de una responsabilidad (verifica si el empleado es Senior *checkSeniority* y de generar el **ID** del empleado *generateEmId*, además de encapsular el objeto Empleado).
 
-Posibles problemas:
-* Fuerte acoplamiento entre la clase **Empleado** y sus clases clientes (debido a la multi reponsabilidad de la clase **Empleado**)
+Posibles razones del problema:
+- Existe un fuerte acoplamiento entre la clase **Empleado** y sus clases clientes (debido a la multi reponsabilidad de la clase **Empleado**)
+
 
 
 ## PREGUNTA 3
