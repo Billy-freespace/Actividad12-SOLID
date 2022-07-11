@@ -19,6 +19,14 @@ El ID del empleado es: C303
 Este empleado es un empleado junior
 ```
 
+El método *main* de la clase **Cliente** inicializa creando 2 objetos Empleado (jessica y chalo), los cuales son usando como argumentos del método estático `Client.showEmpDetail(Empleado)`. Este método internamente llama a los métodos `Empleado.displayEmpDetail()` y `checkSeniority(double)`, `Empleado.checkSeniority(double)` y `Empleado.generateEmpId(String)` de su parámetro (objetos Empleado creados).
+
+- Empleado.displayEmpDetail(): Imprime el nombre del empleado y su experiencia en años.
+- Empleado.checkSeniority(double): Devuelve "senior" si el parámetro es menor de 5, o "junior" en caso contrario.
+- Empleado.generateEmpId(String): Genera un ID de empleado concatenando la primera letra de su nombre y un número aleatorio de 3 dígitos.
+
+
+
 ### PREGUNTA 2
 
 La clase **Empleado** tiene multi responsabilidades (verifica si el empleado es Senior *checkSeniority* y generar el **ID** del empleado *generateEmId* y encapsula el objeto Empleado).
