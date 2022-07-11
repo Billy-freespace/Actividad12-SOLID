@@ -1,14 +1,6 @@
 package Solid.SRP;
 
-//static
-//ClienteSolidSRP.method()
-//instance.method()
-
-//nos static
-//ClienteSolidSRP.method() // NO SE PUEDE
-//instance.method()
-
-public class ClienteSolidSRP {
+public class Cliente {
     public static void main(String[] args) {
         System.out.println("Demostracion de SRP");
 
