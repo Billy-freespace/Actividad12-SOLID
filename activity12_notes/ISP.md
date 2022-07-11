@@ -5,7 +5,7 @@
 Se necesita cambiar una clase base o interfaz por las necesidades de las clases que implementan estas interfaces, pero esto a su vez implica implementar las nuevas funcionalidades en las clases que implementa esta interfaz.
 
   
-  
+
 ### PREGUNTA 20
 
 El problema es que al ser ImpresoraAvanzada una implementación de la interfaz Impresora el método sendFax() de aquella está sobrescrito, por lo que cualquier modificación el los argumentos o el tipo de retorno en el método sobrescrito exige que se haga las mismas modificaciones en la definición del método sendFax() en la interfaz (violando el principio OCP), lo cual a su vez exige que se realicen las mismas modificaciones de la interfaz en las demás implementaciones de esta.
