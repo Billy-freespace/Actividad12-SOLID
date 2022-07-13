@@ -71,6 +71,8 @@ La excepción lanzada es `java.lang.UnsupportedOperationException`. Una solució
 
 ### PREGUNTA 15
 
+`No se encontró ninguna sentencia if-else en el código entregado`
+
 ### PREGUNTA 16
 
 Se creó la nueva interfaz `NewPayment`, se trasladó el método `newPayment()` a esta interfaz, se refactorizó el nombre de la interfaz `Payment` a `PreviousPayment`. Ahora ambas clases `GuestUserPayment` y `RegisteredUserPayment` implementan la interfaz `NewyPayment`, y sólo las clase `RegisteredUserPayment` implementa la interfaz `PreviousPayment`.
