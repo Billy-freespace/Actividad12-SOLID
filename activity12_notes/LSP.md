@@ -73,6 +73,56 @@ La excepción lanzada es `java.lang.UnsupportedOperationException`. Una solució
 
 ### PREGUNTA 16
 
+Se creó la nueva interfaz `NewPayment`, se trasladó el método `newPayment()` a esta interfaz, se refactorizó el nombre de la interfaz `Payment` a `PreviousPayment`. Ahora ambas clases `GuestUserPayment` y `RegisteredUserPayment` implementan la interfaz `NewyPayment`, y sólo las clase `RegisteredUserPayment` implementa la interfaz `PreviousPayment`.
+
 ### PREGUNTA 17
 
+Los cambios claves fueron:
+- En la clase `PaymentHelper`, en vez de una sola lista ahora se manejan dos, una que guarda objetos de tipo `NewPayment` y otra de tipo `PreviousPayment`.
+- Se Refactoriza el método `addUser()` a `addNewPayment()` que ahora toma como parámentro objetos de tipo `NewPayment` y los agrega a su lista correspondiente.
+- Análogamente se crea el método `addPreviousPayment()`.
+- El método `showPreviousPayments()`, ahora solo itera sobre la lista de tipo `PreviousPayment`.
+- Análogamente el método `processNewPayments()`, itera sobre la lista de tipo `NewPayment`.
+
 ### PREGUNTA 18
+
+```java
+
+public class Cliente {
+    public static void main(String[] args) {
+
+        System.out.println("Demostracion LSP.\n");
+        PaymentHelper helper = new PaymentHelper();
+
+        // Instanciando dos usuarios registrados
+        RegisteredUserPayment irene = new RegisteredUserPayment("Irene");
+        RegisteredUserPayment claudio = new RegisteredUserPayment("Claudio");
+        // Instanciando el pago de un usuario invitado
+        GuestUserPayment guestUser1 = new GuestUserPayment();
+
+        // Consolidando la informacion del pago anterior al helper
+        helper.addPreviousPayment(irene);
+        helper.addPreviousPayment(claudio);
+
+        // Consolidando nuevas solicitudes de pago al helper
+        helper.addNewPayment(irene);
+        helper.addNewPayment(claudio);
+        helper.addNewPayment(guestUser1);
+
+        /*// Recupera todos los pagos anteriores de los usuarios registrados
+        helper.showPreviousPayments();
+
+        // Procesa todas las solicitudes de pago nuevos de todos los usuarios
+        helper.processNewPayments();*/
+
+        showAllPayments(helper);
+
+    }
+
+    private static void showAllPayments(PaymentHelper helper) {
+        helper.showPreviousPayments();
+        helper.processNewPayments();
+    }
+}
+
+```
