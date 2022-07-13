@@ -1,6 +1,6 @@
 package NoSolid.LSP;
 
-public class RegisteredUserPayment implements Payment{
+public class RegisteredUserPayment implements NewPayment {
     String name;
     public RegisteredUserPayment(String userName) {
         this.name = userName;
