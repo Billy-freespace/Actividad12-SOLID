@@ -998,7 +998,7 @@ public class Cliente {
 
 ### PREGUNTA 35
 
-**BUSCAR CASO EXCEPCIONAL (FALTA)**
+Una excepción a esta sugerencia sería cuando una de las clases de bajo nivel tenga un comportamiento especial de modo que necesita una clase de alto nivel para poder manejar esta clase especial.
 
   
 
