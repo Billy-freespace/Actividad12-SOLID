@@ -2,6 +2,7 @@ package NoSolid.ISP;
 
 interface Fax {
     public String stringTypeFax();
+    
 }
 
 class LanFax implements Fax {

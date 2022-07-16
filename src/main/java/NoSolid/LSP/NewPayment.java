@@ -1,6 +1,6 @@
 package NoSolid.LSP;
 
-interface Payment {
+interface NewPayment {
     void previousPaymentInfo();
     void newPayment();
 }

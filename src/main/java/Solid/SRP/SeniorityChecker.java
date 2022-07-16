@@ -5,3 +5,4 @@ public class SeniorityChecker {
         return  experienceInYears > 5 ?"senior":"junior";
     }
 }
+

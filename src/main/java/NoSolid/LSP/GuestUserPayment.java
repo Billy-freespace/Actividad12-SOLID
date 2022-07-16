@@ -1,8 +1,17 @@
 package NoSolid.LSP;
 
-public class GuestUserPayment implements Payment{
+public class GuestUserPayment implements NewPayment {
 
-    public GuestUserPayment(){} //TEMPORAL
-    public void previousPaymentInfo(){} //TEMPORAL
-    public void newPayment(){} //TEMPORAL
+    String name;
+    public GuestUserPayment() {
+        this.name = "guest";
+    }
+    @Override
+    public void previousPaymentInfo(){
+        throw new UnsupportedOperationException();
+    }
+    @Override
+    public void newPayment(){
+        System.out.println("Procesando de "+name+ "pago actual request.");
+    }
 }

@@ -19,5 +19,5 @@ public class Cliente {
         System.out.println("El ID del empleado es: "+ (new GeneradorIDEmpleado()).generateEmpId(emp.firstName));
         System.out.println("Este empleado es un" + " empleado " +
                 (new SeniorityChecker()).checkSeniority(emp.experienceInYears));
-        }
+    }
 }
